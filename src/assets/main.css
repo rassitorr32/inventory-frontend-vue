@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body {
+        @apply bg-[#F5F7F8] 
+    }
+
+    h1 {
+        @apply text-3xl font-semibold
+    }
+
+    h2 {
+        @apply text-2xl font-semibold
+    }
+
+    h3 {
+        @apply text-xl font-semibold
+    }
+}
+
+@layer utilities{
+    .gradient {
+        @apply bg-gradient-to-r from-primary to-primary-alt
+    }
+}
+
+  
+@layer components {
+
+    .btn-primary {
+        @apply gradient text-white w-full py-2 rounded-lg hover:scale-[1.025] active:scale-100 transition-all
+    }
+
+    .btn-delete {
+        @apply bg-gradient-to-r from-red-600  to-orange-600 text-white w-full py-2 rounded-lg hover:scale-[1.025] active:scale-100 transition-all
+    }
+
+    .form-control {
+        @apply flex flex-col gap-2 mb-4
+    }
+    
+    .form-control label {
+        @apply text-slate-600 text-sm
+    }
+
+    .form-control input { 
+        @apply py-2 px-3 rounded-md border-2 border-slate-300 outline-none transition-all w-full
+        focus:border-b-[2px] focus:border-b-primary
+    }
+
+    .form-password{
+        @apply flex flex-col gap-2 mb-4 relative focus:outline-none
+    }
+
+    .form-control-password input{
+        @apply py-2 px-3 rounded-md border-2 border-slate-300 outline-none transition-all focus:border-b-[2px] focus:border-b-primary w-full
+    }
+
+    .form-control-password i {
+        @apply absolute right-3 bottom-[50%] top-[50%] text-xl cursor-pointer
+    }
+    
+    .sidemenu {
+        @apply hidden md:block w-full text-white  shadow-xl shadow-indigo-100 rounded-tr-3xl rounded-br-3xl max-w-xs p-5 bg-secondary min-h-screen
+    }
+
+    .nav__menu--item{
+        @apply py-3 px-5 flex items-center gap-5 md:mb-5  rounded-lg transition-all
+        hover:nav__link--active hover:scale-[1.025] active:scale-95
+    }
+    
+    .nav__menu--item i{
+        @apply text-xl
+    }
+
+    .nav__link--active{
+        @apply gradient text-white shadow-lg transition-all
+    }
+
+    /* PRODUCTS */
+    .product__card {
+        @apply bg-white py-5 px-5 rounded-lg  shadow-md shadow-indigo-100
+        hover:scale-[1.025] cursor-pointer transition-all hover:shadow-lg hover:shadow-indigo-100
+    }
+
+    .sale__card {
+        @apply bg-white py-5 px-5 rounded-lg  shadow-md shadow-indigo-100
+        hover:scale-[1.025] cursor-pointer transition-all hover:shadow-lg hover:shadow-indigo-100
+    }
+}

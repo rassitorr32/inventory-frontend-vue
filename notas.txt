@@ -1,0 +1,27 @@
+Eliminar Components , Agregar las rutas en Routes.
+npm run dev //Ejecutar app
+
+para los iconos
+https://iconscout.com/unicons/explore/line
+entrar en get started , tambn loquearsse
+
+
+//CREAR CARPETA services y archivo authService.ts para gestionar y validar con el api
+//Ejecutar el comando
+    npm i axios
+//CREAR CARPETA api, CON ARCHIVO inventoryDb.ts para conectarse al api
+
+//CREAR VARIABLES DE ENTORNO, UN ARCHIVO .env EN LA RAIZ
+    VITE_API_URL=http://127.0.0.1:8000/api/auth/login
+    //Sirve para q no este descubierta la url del api
+
+//USAR LA EXTENSION Paste JSON to Code
+    Ctrl + shift + p => Paste JSON as Code, ingresa un nombre 'ILoginResponse'
+
+
+//Asegurar las rutas
+ -En los servicios crear una funcion para validar el token
+ -En las rutas agregar la pripiedad meta con la pripiedad requiresAuth en true para saber q es requerida la autenticacion
+    y crear la funcion reuter,beforeEach(async (to,form,next)=>{})
+    y ahi validar el token para poder redireccionar
+
